@@ -3,6 +3,6 @@ I'm a very beginner hobbiest coder and I barely have any clue what I'm doing. Go
 
 ---
 
-A simple flappy bird clone for the pimoroni pico using my explorer project base.
+A simple flappy bird clone for the pimoroni explorer using my explorer project base.
 
 ---
