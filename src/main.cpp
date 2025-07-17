@@ -147,6 +147,7 @@ int main()
 
 void gen_pipes(std::vector<Rect>& _pipes, const int32_t _x, const int _pairs)
 {
+	_pipes.reserve(_pairs);
 	int32_t pipe_cur{_x};
 	int32_t rand_offset{0};	// NOTE: between -99 and 99 or something like that
 
@@ -154,8 +155,8 @@ void gen_pipes(std::vector<Rect>& _pipes, const int32_t _x, const int _pairs)
 	{
 		rand_offset = rand() % 200 - 100;
 
-		_pipes.push_back(Rect(pipe_cur, 0, pipe_width, half_height + rand_offset - 50));
-		_pipes.push_back(Rect(pipe_cur, half_height + rand_offset + 50, pipe_width, 70 - rand_offset));
+		_pipes.emplace_back(pipe_cur, 0, pipe_width, half_height + rand_offset - 50);
+		_pipes.emplace_back(pipe_cur, half_height + rand_offset + 50, pipe_width, 70 - rand_offset);
 		pipe_cur += pipe_spacing;
 	}
 }
